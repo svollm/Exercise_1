@@ -8,3 +8,4 @@ https://www.freiburg.de/pb/,Lde/205243.html
 
 And here is a picture of the Münster:
 
+![bild](Freiburg-Foto-Vortrag.jpg)
