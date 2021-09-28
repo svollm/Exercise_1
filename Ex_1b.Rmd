@@ -9,24 +9,37 @@ date: 20.09.21
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Exercise 1. b)-3
+## Exercise 1. b)
 
 Create an HTML document that samples 100 values from a log-normal distribution (say, mu=1, sigma=.25); create a histogram of the distribution and the distribution on the log scale; report the mean and variance of the sample in line in the text. In general, do not just dump the R code and plots in the HTML document; break your exercises into sections with headings, add some text and make it readable.
 
-#Code
+
+#Code for Data Generation
 
 ```{r}
-set.seed(10)
+set.seed(10) #for reproducibility
 data <- rlnorm(n=100,   meanlog = 1,sdlog = .25)
+```
+#Code for Histograms
+
+```{r}
 hist(data,main = "Histogram of simulated data")
 hist(log(data),main = "Histogram of simulated data on log scale")
+```
+
+#Code for Summary Statistics
+
+```{r}
 mean_data <- mean(data)
 var_data <- var(data)
+mean_data_log <- mean(log(data))
+var_data_log <- var(log(data))
 ```
 
 # Results
 
 The mean of the simulated data is `r mean_data`, the variance is `r var_data`.
+The mean of the simulated log-data is `r mean_data_log`, the variance is `r var_data_log`.
 
 
 
